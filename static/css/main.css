@@ -1,0 +1,199 @@
+/* estudiantes/static/estudiantes/main.css */
+
+/* --- Configuración Global (Tema Oscuro) --- */
+:root {
+    --color-primario: #3a79f7;
+    --color-primario-hover: #2a68e8;
+    --color-fondo: #121212;
+    --color-tarjeta: #1e1e1e;
+    --color-texto: #e0e0e0;
+    --color-texto-secundario: #a0a0a0;
+    --color-borde: #333333;
+    --color-borde-focus: #3a79f7;
+    --color-input-fondo: #2c2c2c;
+    --color-error: #ff4d4d;
+    --sombra-tarjeta: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --radio-borde: 8px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* --- El Contenedor del Formulario --- */
+.form-container {
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--color-tarjeta);
+    padding: 2.5rem; /* 40px */
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-tarjeta);
+    border: 1px solid var(--color-borde);
+    box-sizing: border-box;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--color-texto);
+    margin: 0 0 2rem 0;
+    font-size: 1.75rem; /* 28px */
+}
+
+/* --- Grupos de Formulario (Label + Input) --- */
+.form-group {
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem; /* 8px */
+    font-weight: 600;
+    color: var(--color-texto-secundario);
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 0.8rem 1rem; /* 12px 16px */
+    background-color: var(--color-input-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: var(--color-texto);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-borde-focus);
+    box-shadow: 0 0 0 3px rgba(58, 121, 247, 0.3);
+}
+
+/* --- Botón Principal --- */
+.form-button {
+    width: 100%;
+    padding: 0.85rem; /* 14px */
+    border: none;
+    border-radius: var(--radio-borde);
+    background-color: var(--color-primario);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    margin-top: 1rem;
+}
+
+.form-button:hover {
+    background-color: var(--color-primario-hover);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Manejo de Errores --- */
+.errorlist {
+    list-style-type: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    color: var(--color-error);
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+}
+
+/* Errores generales */
+.non-field-errors .errorlist {
+    padding: 1rem;
+    background-color: rgba(255, 77, 77, 0.05);
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: var(--radio-borde);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Errores específicos de un campo */
+.form-group input.has-error {
+    border-color: var(--color-error);
+}
+
+.form-group input.has-error:focus {
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.25);
+}
+
+/* --- Estilos para la Tarjeta de Éxito (Versión Oscura) --- */
+.success-card {
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--color-tarjeta);
+    padding: 2.5rem;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-tarjeta);
+    border: 1px solid var(--color-borde);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.success-card h2 {
+    color: #33d6a6; /* Un verde menta brillante para modo oscuro */
+    margin: 0 0 1.5rem 0;
+    font-size: 2rem; /* 32px */
+}
+
+.success-card p {
+    font-size: 1.1rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: 2rem;
+}
+
+.success-card .form-button {
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    padding: 0.85rem 1.5rem;
+}
+/* ... (Todo el código del login/registro en modo oscuro va aquí arriba) ... */
+
+
+/* --- Estilos para la Tarjeta de Éxito (Versión Oscura) --- */
+
+.success-card {
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--color-tarjeta); /* Reutiliza color de tarjeta */
+    padding: 2.5rem;
+    border-radius: var(--radio-borde);    /* Reutiliza radio de borde */
+    box-shadow: var(--sombra-tarjeta);    /* Reutiliza sombra */
+    border: 1px solid var(--color-borde); /* Reutiliza borde */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.success-card h2 {
+    color: #33d6a6; /* Verde menta brillante para éxito en modo oscuro */
+    margin: 0 0 1.5rem 0;
+    font-size: 2rem; 
+}
+
+.success-card p {
+    font-size: 1.1rem;
+    color: var(--color-texto-secundario); /* Reutiliza color de texto sec. */
+    margin-bottom: 2rem;
+}
+
+/* Estilo para el botón de "Registrar otro" */
+.success-card .form-button {
+    text-decoration: none;
+    display: inline-block; /* Hace que el botón no ocupe todo el ancho */
+    width: auto;
+    padding: 0.85rem 1.5rem; /* Más espacio a los lados */
+}
